@@ -202,7 +202,7 @@ namespace CRUDAPI.Controllers
                 stopwatch.Stop();
                 _logger.LogInformation("Successfully deleted user with ID: {Id} in {ElapsedMilliseconds} ms.", id, stopwatch.ElapsedMilliseconds);
 
-                return Ok(user);
+                return Ok(new { Message = $"User deleted successfully" });
             }
             catch (Exception ex)
             {
